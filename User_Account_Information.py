@@ -102,6 +102,10 @@ class UserAccInfoApp:
         self.cancel_button = Button(self.root, text="Cancel", bg="#FFFFFF", font=("Arial, 16"),
                                     fg="#000000", width=10, command=self.clear_fields)
         self.cancel_button.place(relx=.66, rely=.78, anchor=CENTER)
+        
+        self.quit_button = Button(self.root, text="Quit", bg="#FF6347", font=("Arial", 16),
+                                  fg="#FFFFFF", width=10, command=self.root.quit)
+        self.quit_button.place(relx=.81, rely=.78, anchor=CENTER)
 
     def save_data_query(self):
         data = [
