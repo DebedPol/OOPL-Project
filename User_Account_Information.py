@@ -128,7 +128,7 @@ class UserAccInfoApp:
             self.employeenum.get()
         ]
 
-        con = sqlite3.connect("USER_ACC_INFO")
+        con = sqlite3.connect("USER_ACC_INFO.db")
         save_data_query = """
         INSERT INTO user_acc_info_tbl (first_name, middle_name, last_name, suffix, department, 
         designation, username, password, confirm_password, usertype, user_status, employee_num) VALUES (?, ?, ?, ?, ?, ?, 
@@ -160,7 +160,7 @@ class UserAccInfoApp:
             tk.messagebox.showerror("Error", "Employee number is required to delete a record")
             return
 
-        con = sqlite3.connect("USER_ACC_INFO")
+        con = sqlite3.connect("USER_ACC_INFO.db")
         delete_data_query = "DELETE FROM user_acc_info_tbl WHERE employee_num = ?"
         cur = con.cursor()
         cur.execute(delete_data_query, (employee_num,))
