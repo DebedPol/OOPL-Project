@@ -68,6 +68,7 @@ def save_data():
     conn.commit()
     conn.close()
 
+
 def search_data():
     conn = sqlite3.connect('employee_info.db')
     c = conn.cursor()
@@ -77,50 +78,74 @@ def search_data():
     if data:
         firstnametxt.delete("1.0", END)
         firstnametxt.insert(END, data[0])
+
         middle_nametxt.delete("1.0", END)
         middle_nametxt.insert(END, data[1])
+
         surnametxt.delete("1.0", END)
         surnametxt.insert(END, data[2])
+
         suffixtxt.delete("1.0", END)
         suffixtxt.insert(END, data[3])
+
         date_of_birthtxt.delete("1.0", END)
         date_of_birthtxt.insert(END, data[4])
+
         nationalitytxt.delete("1.0", END)
         nationalitytxt.insert(END, data[5])
+
         gender_var.set(data[6])
         civil_status_var.set(data[7])
+
         departmenttxt.delete("1.0", END)
         departmenttxt.insert(END, data[8])
+
         designationtxt.delete("1.0", END)
         designationtxt.insert(END, data[9])
+
         employee_statustxt.delete("1.0", END)
         employee_statustxt.insert(END, data[10])
+
+        employee_numbertxt.delete("1.0", END)
+        employee_numbertxt.insert(END, data[11])
+
         contact_numbertxt.delete("1.0", END)
-        contact_numbertxt.insert(END, data[11])
+        contact_numbertxt.insert(END, data[12])
+
         email_addresstxt.delete("1.0", END)
-        email_addresstxt.insert(END, data[12])
+        email_addresstxt.insert(END, data[13])
+
         other_social_mediatxt.delete("1.0", END)
-        other_social_mediatxt.insert(END, data[13])
+        other_social_mediatxt.insert(END, data[14])
+
         social_media_accounttxt.delete("1.0", END)
-        social_media_accounttxt.insert(END, data[14])
+        social_media_accounttxt.insert(END, data[15])
+
         address_line1txt.delete("1.0", END)
-        address_line1txt.insert(END, data[15])
+        address_line1txt.insert(END, data[16])
+
         address_line2txt.delete("1.0", END)
-        address_line2txt.insert(END, data[16])
+        address_line2txt.insert(END, data[17])
+
         baranggaytxt.delete("1.0", END)
-        baranggaytxt.insert(END, data[17])
+        baranggaytxt.insert(END, data[18])
+
         municipalittxt.delete("1.0", END)
-        municipalittxt.insert(END, data[18])
+        municipalittxt.insert(END, data[19])
+
         provincetxt.delete("1.0", END)
-        provincetxt.insert(END, data[19])
+        provincetxt.insert(END, data[20])
+
         zip_codetxt.delete("1.0", END)
-        zip_codetxt.insert(END, data[20])
+        zip_codetxt.insert(END, data[21])
+
         countrytxt.delete("1.0", END)
-        countrytxt.insert(END, data[21])
+        countrytxt.insert(END, data[22])
+
         picturepathtxt.delete("1.0", END)
-        picturepathtxt.insert(END, data[22])
+        picturepathtxt.insert(END, data[23])
     else:
-        print("Employee not found.")
+        messagebox.showinfo("Error", "Employee not found.")
     conn.close()
 def clear_fields():
     # Clear all entry fields
