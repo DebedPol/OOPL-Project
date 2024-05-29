@@ -64,7 +64,7 @@ login_button = tk.Button(root, text="Login", font=("Arial", 12), bg='light green
 login_button.place(x=300, y=260)
 
 
-register_button = tk.Button(root, text="Register", font=("Arial", 12), bg='#CDD6DB', fg='dark blue', command=open_registration)
+register_button = tk.Button(root, text="Register", font=("Arial", 12), bg='red', fg='dark blue', command=open_registration)
 register_button.place(x=400, y=260)
 
 root.mainloop()
