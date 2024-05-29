@@ -59,11 +59,12 @@ tk.Label(root, text="Password:", font=("Verdana", 12), fg="dark blue").place(x=2
 password_entry = tk.Entry(root, show="*")
 password_entry.place(x=400, y=220)
 
-login_button = tk.Button(root, text="Login", font=("Arial", 12), bg='sky blue', fg='dark blue', command=login)
+
+login_button = tk.Button(root, text="Login", font=("Arial", 12), bg='light green', fg='gray', command=login)
 login_button.place(x=300, y=260)
 
 
-register_button = tk.Button(root, text="Register", font=("Arial", 12), bg='red', fg='dark blue', command=open_registration)
+register_button = tk.Button(root, text="Register", font=("Arial", 12), bg='#CDD6DB', fg='dark blue', command=open_registration)
 register_button.place(x=400, y=260)
 
 root.mainloop()
