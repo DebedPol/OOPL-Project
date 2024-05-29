@@ -60,7 +60,7 @@ password_entry = tk.Entry(root, show="*")
 password_entry.place(x=400, y=220)
 
 
-login_button = tk.Button(root, text="Login", font=("Arial", 12), bg='light green', fg='gray', command=login)
+login_button = tk.Button(root, text="Login", font=("Arial", 12), bg='sky blue', fg='dark blue', command=login)
 login_button.place(x=300, y=260)
 
 
